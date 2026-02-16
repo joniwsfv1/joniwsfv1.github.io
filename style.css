@@ -1,46 +1,75 @@
-body {
-    body {
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-}
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #000000;
-    color: white;
+body {
+    font-family: 'Rethink Sans', sans-serif;
+    background-color: #f1f5f9; /* branco mais escuro */
+    display: flex;
+}
+
+/* MENU LATERAL */
+.menu {
+    width: 250px;
+    height: 100vh;
+    background-color: #e2e8f0;
+    padding: 40px 20px;
+    position: fixed;
+}
+
+.menu h2 {
+    margin-bottom: 30px;
+}
+
+.menu a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #cbd5e1;
+}
+
+/* CONTEÚDO */
+.content {
+    margin-left: 270px;
+    padding: 60px;
+    width: 100%;
 }
 
 section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
+    margin-bottom: 80px;
 }
 
 h1 {
-    font-size: 40px;
+    margin-bottom: 20px;
+    color: #0f172a;
 }
 
-h2 {
-    border-bottom: 2px solid #38bdf8;
-    padding-bottom: 5px;
+p, li {
+    font-size: 18px;
+    color: #334155;
 }
 
 ul {
     list-style: none;
-    padding: 0;
 }
 
-ul li {
-    margin-bottom: 10px;
+/* LINKS DE CONTATO */
+.link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: hsl(0, 0%, 0%);
-    color: white;
+.link:hover {
+    text-decoration: underline;
 }
