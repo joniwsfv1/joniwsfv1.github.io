@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Tenório | Portfólio</title>
 
-    <title>Jonathan Tenório | Desenvolvedor</title>
-
-    <!-- Fonte Rethink Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="icon.png">
 </head>
 
 <body>
 
 <div class="container">
 
+    <!-- MENU -->
     <nav class="menu">
-        <h2>Jonathan</h2>
-        <a href="#sobre">Sobre Mim</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <h2>Jonathan Tenório</h2>
+        <button onclick="mostrar('inicio')">Início</button>
+        <button onclick="mostrar('sobre')">Sobre Mim</button>
+        <button onclick="mostrar('habilidades')">Habilidades</button>
+        <button onclick="mostrar('projetos')">Projetos</button>
+        <button onclick="mostrar('contato')">Contato</button>
     </nav>
 
+    <!-- CONTEÚDO -->
     <main class="content">
 
-        <section id="sobre">
-            <h1>Sobre Mim</h1>
+        <section id="inicio" class="aba ativa">
+            <h1>Bem-vindo ao meu Portfólio</h1>
             <p>
-                Tenho 16 anos e estou construindo minha carreira como desenvolvedor.
-                Estou aprendendo HTML, CSS, Git e criando projetos reais.
+                Este é o meu espaço na internet onde mostro minha evolução
+                como desenvolvedor.
             </p>
         </section>
 
-        <section id="habilidades">
+        <section id="sobre" class="aba">
+            <h1>Sobre Mim</h1>
+            <p>
+                Tenho 16 anos e estou construindo minha carreira como desenvolvedor.
+                Estudo HTML, CSS, Git e estou evoluindo todos os dias.
+            </p>
+        </section>
+
+        <section id="habilidades" class="aba">
             <h1>Habilidades</h1>
             <ul>
                 <li>HTML</li>
@@ -45,19 +52,18 @@
             </ul>
         </section>
 
-        <section id="projetos">
+        <section id="projetos" class="aba">
             <h1>Projetos</h1>
             <p>Meu primeiro site publicado no GitHub Pages.</p>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="aba">
             <h1>Contato</h1>
-            <p>Email: 
-                <a href="mailto:joniws.tenorio@gmail.com" class="link">
-                    joniws.tenorio@gmail.com
+            <p>Email:
+                <a href="mailto:joniwsfv1@gmail.com" class="link">
+                    joniwsfv1@gmail.com
                 </a>
             </p>
-
             <p>Telefone:
                 <a href="tel:+5511976082899" class="link">
                     11 97608-2899
@@ -69,4 +75,7 @@
 
 </div>
 
+<script src="script.js"></script>
+
 </body>
+</html>

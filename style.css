@@ -6,64 +6,61 @@
 
 body {
     font-family: 'Rethink Sans', sans-serif;
-    background-color: #f1f5f9; /* branco mais escuro */
+    background-color: #eef2f7;
+}
+
+.container {
     display: flex;
 }
 
-/* MENU LATERAL */
+/* MENU */
 .menu {
-    width: 250px;
+    width: 240px;
     height: 100vh;
     background-color: #e2e8f0;
     padding: 40px 20px;
-    position: fixed;
 }
 
 .menu h2 {
     margin-bottom: 30px;
 }
 
-.menu a {
+.menu button {
     display: block;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: #1e293b;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #cbd5e1;
     font-weight: 600;
-    padding: 8px;
     border-radius: 6px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.menu a:hover {
-    background-color: #cbd5e1;
+.menu button:hover {
+    background-color: #94a3b8;
 }
 
 /* CONTEÚDO */
 .content {
-    margin-left: 270px;
+    flex: 1;
     padding: 60px;
-    width: 100%;
 }
 
-section {
-    margin-bottom: 80px;
+/* ABAS */
+.aba {
+    display: none;
+}
+
+.ativa {
+    display: block;
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #0f172a;
 }
 
-p, li {
-    font-size: 18px;
-    color: #334155;
-}
-
-ul {
-    list-style: none;
-}
-
-/* LINKS DE CONTATO */
 .link {
     color: #2563eb;
     text-decoration: none;
