@@ -5,10 +5,150 @@
     <title>Jonathan Tenório | Desenvolvedor Front-End</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonte -->
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rethink Sans', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* MENU */
+        .menu {
+            width: 260px;
+            background: #111827;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-bottom: 40px;
+            font-weight: 800;
+            font-size: 20px;
+            color: #38bdf8;
+        }
+
+        .menu button {
+            font-family: 'Archivo Black', sans-serif;
+            background: transparent;
+            border: 1px solid #334155;
+            color: white;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .menu button:hover {
+            background: #1e293b;
+        }
+
+        /* BOTÃO ATIVO */
+        .menu button.ativo {
+            background: #38bdf8;
+            color: #0f172a;
+            border: 1px solid #38bdf8;
+        }
+
+        /* CONTEÚDO */
+        .content {
+            flex: 1;
+            padding: 80px;
+        }
+
+        .aba {
+            display: none;
+            animation: fade 0.4s ease-in-out;
+        }
+
+        .ativa {
+            display: block;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #38bdf8;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: #1e293b;
+            border-radius: 6px;
+        }
+
+        .link {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .menu {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu button {
+                margin: 5px;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,79 +158,65 @@
     <nav class="menu">
         <h2 class="logo">Jonathan Tenório</h2>
 
-        <button onclick="mostrarAba('inicio')">Início</button>
-        <button onclick="mostrarAba('sobre')">Sobre Mim</button>
-        <button onclick="mostrarAba('habilidades')">Habilidades</button>
-        <button onclick="mostrarAba('projetos')">Projetos</button>
-        <button onclick="mostrarAba('contato')">Contato</button>
+        <button class="ativo" onclick="mostrarAba(event,'inicio')">Início</button>
+        <button onclick="mostrarAba(event,'sobre')">Sobre Mim</button>
+        <button onclick="mostrarAba(event,'habilidades')">Habilidades</button>
+        <button onclick="mostrarAba(event,'projetos')">Projetos</button>
+        <button onclick="mostrarAba(event,'contato')">Contato</button>
     </nav>
 
     <main class="content">
 
         <section id="inicio" class="aba ativa">
             <h1>Desenvolvedor em Formação</h1>
-            <p>
-                Transformando aprendizado em projetos reais.
-            </p>
-            <p>
-                Estou construindo minha base sólida em desenvolvimento web
-                com foco em performance, organização e evolução constante.
-            </p>
+            <p>Transformando aprendizado em projetos reais.</p>
+            <p>Construindo base sólida em HTML, CSS, JavaScript e Git.</p>
         </section>
 
         <section id="sobre" class="aba">
             <h1>Sobre Mim</h1>
-            <p>
-                Tenho 16 anos e estou iniciando minha carreira na área de tecnologia.
-                Sou focado, disciplinado e movido por evolução constante.
-            </p>
-            <p>
-                Estudo desenvolvimento web com HTML, CSS e JavaScript,
-                aplicando meus conhecimentos em projetos práticos.
-            </p>
-            <p>
-                Busco minha primeira oportunidade como Jovem Aprendiz ou
-                Desenvolvedor Júnior para crescer profissionalmente.
-            </p>
+            <p>Tenho 16 anos e estou iniciando minha carreira na área de tecnologia.</p>
+            <p>Sou disciplinado, focado e comprometido com evolução constante.</p>
         </section>
 
         <section id="habilidades" class="aba">
-            <h1>Habilidades Técnicas</h1>
+            <h1>Habilidades</h1>
             <ul>
-                <li>HTML5 Semântico</li>
-                <li>CSS3 Moderno (Flexbox + Responsividade)</li>
-                <li>JavaScript (DOM e Interatividade)</li>
+                <li>HTML5</li>
+                <li>CSS3 (Flexbox + Responsividade)</li>
+                <li>JavaScript</li>
                 <li>Git & GitHub</li>
             </ul>
         </section>
 
         <section id="projetos" class="aba">
             <h1>Projetos</h1>
-            <p><strong>Portfólio Profissional</strong> – Desenvolvido com sistema de abas e layout responsivo.</p>
-            <p>Publicação realizada via GitHub Pages com versionamento Git.</p>
+            <p>Portfólio profissional publicado no GitHub Pages.</p>
         </section>
 
         <section id="contato" class="aba">
             <h1>Contato</h1>
-
-            <p>Email:
-                <a href="mailto:joniws.tenorio@gmail.com" class="link">
-                    joniws.tenorio@gmail.com
-                </a>
-            </p>
-
-            <p>Telefone:
-                <a href="tel:+5511976082899" class="link">
-                    11 97608-2899
-                </a>
-            </p>
+            <p>Email: <a href="mailto:joniwsfv1@gmail.com" class="link">joniwsfv1@gmail.com</a></p>
+            <p>Telefone: <a href="tel:+5511976082899" class="link">11 97608-2899</a></p>
         </section>
 
     </main>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+function mostrarAba(event, id) {
+
+    const abas = document.querySelectorAll('.aba');
+    const botoes = document.querySelectorAll('.menu button');
+
+    abas.forEach(aba => aba.classList.remove('ativa'));
+    botoes.forEach(botao => botao.classList.remove('ativo'));
+
+    document.getElementById(id).classList.add('ativa');
+    event.target.classList.add('ativo');
+}
+</script>
 
 </body>
 </html>
