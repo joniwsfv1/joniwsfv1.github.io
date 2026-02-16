@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="icone.png">
 
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 
         /* MENU */
         .menu {
-            width: 260px;
+            width: 240px;
             background: #111827;
             padding: 40px 20px;
             display: flex;
@@ -40,7 +40,7 @@
         }
 
         .logo {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 800;
             font-size: 20px;
             color: #38bdf8;
@@ -52,11 +52,11 @@
             border: 1px solid #334155;
             color: white;
             padding: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-radius: 8px;
             cursor: pointer;
             transition: 0.3s ease;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 1px;
         }
 
@@ -64,7 +64,6 @@
             background: #1e293b;
         }
 
-        /* BOTÃO ATIVO */
         .menu button.ativo {
             background: #38bdf8;
             color: #0f172a;
@@ -74,11 +73,15 @@
         /* CONTEÚDO */
         .content {
             flex: 1;
-            padding: 80px;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
         }
 
         .aba {
             display: none;
+            max-width: 650px; /* deixa o texto mais vertical */
+            width: 100%;
             animation: fade 0.4s ease-in-out;
         }
 
@@ -97,9 +100,15 @@
             }
         }
 
+        .foto-site {
+            width: 90px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+        }
+
         h1 {
             margin-bottom: 25px;
-            font-size: 34px;
+            font-size: 30px;
             color: #38bdf8;
         }
 
@@ -163,86 +172,94 @@
     <nav class="menu">
         <h2 class="logo">Jonathan Tenório</h2>
 
-        <button class="ativo" onclick="mostrarAba(event,'inicio')">Início</button>
-        <button onclick="mostrarAba(event,'sobre')">Sobre Mim</button>
-        <button onclick="mostrarAba(event,'habilidades')">Habilidades</button>
-        <button onclick="mostrarAba(event,'projetos')">Projetos</button>
-        <button onclick="mostrarAba(event,'contato')">Contato</button>
+        <button class="ativo" onclick="mostrarAba(event,'inicio')">INÍCIO</button>
+        <button onclick="mostrarAba(event,'sobre')">SOBRE</button>
+        <button onclick="mostrarAba(event,'habilidades')">HABILIDADES</button>
+        <button onclick="mostrarAba(event,'projetos')">PROJETOS</button>
+        <button onclick="mostrarAba(event,'contato')">CONTATO</button>
     </nav>
 
     <main class="content">
 
-        <!-- INÍCIO -->
         <section id="inicio" class="aba ativa">
-            <h1>Desenvolvedor em Formação</h1>
+            <img src="icone.png" alt="Ícone JT" class="foto-site">
+
+            <h1>Desenvolvedor Front-End em Formação</h1>
+
             <p>
-                Meu nome é Jonathan Tenório e estou construindo minha trajetória na área de tecnologia.
-                Este portfólio representa minha evolução prática como desenvolvedor front-end.
+                Meu nome é Jonathan Tenório e este é meu portfólio profissional.
+                Aqui apresento minha evolução prática na área de desenvolvimento web.
             </p>
+
             <p>
-                Estou focado em dominar os fundamentos do desenvolvimento web, aplicando HTML,
-                CSS moderno, JavaScript e versionamento com Git em projetos reais.
+                Estou construindo base sólida em HTML, CSS moderno,
+                JavaScript e versionamento com Git.
             </p>
+
             <p>
-                Meu objetivo é conquistar minha primeira oportunidade profissional na área de TI,
-                onde eu possa contribuir, aprender e evoluir constantemente.
+                Busco minha primeira oportunidade na área de tecnologia
+                para aplicar meus conhecimentos e continuar evoluindo.
             </p>
         </section>
 
-        <!-- SOBRE -->
         <section id="sobre" class="aba">
             <h1>Sobre Mim</h1>
+
             <p>
-                Tenho 16 anos e sou estudante com grande interesse por tecnologia e desenvolvimento
-                de software. Descobri na programação uma área onde posso unir lógica,
-                criatividade e resolução de problemas.
+                Tenho 16 anos e estou iniciando minha jornada profissional
+                na área de tecnologia.
             </p>
+
             <p>
-                Sou disciplinado, organizado e tenho facilidade de aprendizado autodidata.
-                Busco sempre transformar conhecimento em prática por meio de projetos próprios.
+                Sou disciplinado, focado e movido por evolução constante.
+                Acredito que consistência diária é o que constrói grandes resultados.
             </p>
+
             <p>
-                Estou em constante evolução técnica e pessoal, buscando crescer como
-                desenvolvedor e como profissional.
+                Meu objetivo é crescer como desenvolvedor e
+                conquistar experiência prática no mercado.
             </p>
         </section>
 
-        <!-- HABILIDADES -->
         <section id="habilidades" class="aba">
             <h1>Habilidades Técnicas</h1>
-            <p>Atualmente venho desenvolvendo base sólida nas seguintes tecnologias:</p>
+
             <ul>
                 <li>HTML5 – Estruturação semântica</li>
-                <li>CSS3 – Layout moderno com Flexbox e responsividade</li>
-                <li>JavaScript – Manipulação de DOM e interatividade</li>
-                <li>Git – Controle de versão</li>
-                <li>GitHub – Publicação e gerenciamento de projetos</li>
+                <li>CSS3 – Layout moderno e responsivo</li>
+                <li>JavaScript – Manipulação de DOM</li>
+                <li>Git & GitHub – Controle de versão</li>
             </ul>
         </section>
 
-        <!-- PROJETOS -->
         <section id="projetos" class="aba">
             <h1>Projetos</h1>
+
             <p>
-                Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript,
-                com sistema de abas, animações suaves e layout responsivo.
+                Este portfólio foi desenvolvido do zero utilizando
+                HTML, CSS e JavaScript puro.
             </p>
+
             <p>
-                O projeto foi versionado com Git e publicado via GitHub Pages,
-                aplicando conceitos reais de deploy.
-            </p>
-            <p>
-                Estou constantemente desenvolvendo novos projetos práticos
-                para fortalecer minha base técnica.
+                O projeto foi versionado com Git e publicado
+                via GitHub Pages.
             </p>
         </section>
 
-        <!-- CONTATO -->
         <section id="contato" class="aba">
             <h1>Contato</h1>
-            <p>Estou disponível para oportunidades na área de tecnologia.</p>
-            <p>Email: <a href="mailto:joniwsfv1@gmail.com" class="link">joniwsfv1@gmail.com</a></p>
-            <p>Telefone: <a href="tel:+5511976082899" class="link">11 97608-2899</a></p>
+
+            <p>Email:
+                <a href="mailto:joniws.tenorio@gmail.com" class="link">
+                    joniws.tenorio@gmail.com
+                </a>
+            </p>
+
+            <p>Telefone:
+                <a href="tel:+5511976082899" class="link">
+                    11 97608-2899
+                </a>
+            </p>
         </section>
 
     </main>
