@@ -5,6 +5,9 @@
     <title>Jonathan Tenório | Desenvolvedor Front-End</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -95,24 +98,26 @@
         }
 
         h1 {
-            margin-bottom: 20px;
-            font-size: 32px;
+            margin-bottom: 25px;
+            font-size: 34px;
             color: #38bdf8;
         }
 
         p {
-            margin-bottom: 15px;
-            line-height: 1.6;
+            margin-bottom: 18px;
+            line-height: 1.7;
             color: #cbd5e1;
+            font-size: 16px;
         }
 
         ul {
             list-style: none;
+            margin-top: 15px;
         }
 
         ul li {
-            margin-bottom: 10px;
-            padding: 8px 12px;
+            margin-bottom: 12px;
+            padding: 10px 14px;
             background: #1e293b;
             border-radius: 6px;
         }
@@ -167,35 +172,75 @@
 
     <main class="content">
 
+        <!-- INÍCIO -->
         <section id="inicio" class="aba ativa">
             <h1>Desenvolvedor em Formação</h1>
-            <p>Transformando aprendizado em projetos reais.</p>
-            <p>Construindo base sólida em HTML, CSS, JavaScript e Git.</p>
+            <p>
+                Meu nome é Jonathan Tenório e estou construindo minha trajetória na área de tecnologia.
+                Este portfólio representa minha evolução prática como desenvolvedor front-end.
+            </p>
+            <p>
+                Estou focado em dominar os fundamentos do desenvolvimento web, aplicando HTML,
+                CSS moderno, JavaScript e versionamento com Git em projetos reais.
+            </p>
+            <p>
+                Meu objetivo é conquistar minha primeira oportunidade profissional na área de TI,
+                onde eu possa contribuir, aprender e evoluir constantemente.
+            </p>
         </section>
 
+        <!-- SOBRE -->
         <section id="sobre" class="aba">
             <h1>Sobre Mim</h1>
-            <p>Tenho 16 anos e estou iniciando minha carreira na área de tecnologia.</p>
-            <p>Sou disciplinado, focado e comprometido com evolução constante.</p>
+            <p>
+                Tenho 16 anos e sou estudante com grande interesse por tecnologia e desenvolvimento
+                de software. Descobri na programação uma área onde posso unir lógica,
+                criatividade e resolução de problemas.
+            </p>
+            <p>
+                Sou disciplinado, organizado e tenho facilidade de aprendizado autodidata.
+                Busco sempre transformar conhecimento em prática por meio de projetos próprios.
+            </p>
+            <p>
+                Estou em constante evolução técnica e pessoal, buscando crescer como
+                desenvolvedor e como profissional.
+            </p>
         </section>
 
+        <!-- HABILIDADES -->
         <section id="habilidades" class="aba">
-            <h1>Habilidades</h1>
+            <h1>Habilidades Técnicas</h1>
+            <p>Atualmente venho desenvolvendo base sólida nas seguintes tecnologias:</p>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3 (Flexbox + Responsividade)</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
+                <li>HTML5 – Estruturação semântica</li>
+                <li>CSS3 – Layout moderno com Flexbox e responsividade</li>
+                <li>JavaScript – Manipulação de DOM e interatividade</li>
+                <li>Git – Controle de versão</li>
+                <li>GitHub – Publicação e gerenciamento de projetos</li>
             </ul>
         </section>
 
+        <!-- PROJETOS -->
         <section id="projetos" class="aba">
             <h1>Projetos</h1>
-            <p>Portfólio profissional publicado no GitHub Pages.</p>
+            <p>
+                Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript,
+                com sistema de abas, animações suaves e layout responsivo.
+            </p>
+            <p>
+                O projeto foi versionado com Git e publicado via GitHub Pages,
+                aplicando conceitos reais de deploy.
+            </p>
+            <p>
+                Estou constantemente desenvolvendo novos projetos práticos
+                para fortalecer minha base técnica.
+            </p>
         </section>
 
+        <!-- CONTATO -->
         <section id="contato" class="aba">
             <h1>Contato</h1>
+            <p>Estou disponível para oportunidades na área de tecnologia.</p>
             <p>Email: <a href="mailto:joniwsfv1@gmail.com" class="link">joniwsfv1@gmail.com</a></p>
             <p>Telefone: <a href="tel:+5511976082899" class="link">11 97608-2899</a></p>
         </section>
@@ -206,7 +251,6 @@
 
 <script>
 function mostrarAba(event, id) {
-
     const abas = document.querySelectorAll('.aba');
     const botoes = document.querySelectorAll('.menu button');
 
