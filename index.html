@@ -2,10 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Tenório | Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,33 +16,26 @@
 
 <div class="container">
 
-    <!-- MENU -->
     <nav class="menu">
         <h2>Jonathan Tenório</h2>
-        <button onclick="mostrar('inicio')">Início</button>
-        <button onclick="mostrar('sobre')">Sobre Mim</button>
-        <button onclick="mostrar('habilidades')">Habilidades</button>
-        <button onclick="mostrar('projetos')">Projetos</button>
-        <button onclick="mostrar('contato')">Contato</button>
+
+        <button onclick="mostrarAba('inicio')">Início</button>
+        <button onclick="mostrarAba('sobre')">Sobre Mim</button>
+        <button onclick="mostrarAba('habilidades')">Habilidades</button>
+        <button onclick="mostrarAba('projetos')">Projetos</button>
+        <button onclick="mostrarAba('contato')">Contato</button>
     </nav>
 
-    <!-- CONTEÚDO -->
     <main class="content">
 
         <section id="inicio" class="aba ativa">
             <h1>Bem-vindo ao meu Portfólio</h1>
-            <p>
-                Este é o meu espaço na internet onde mostro minha evolução
-                como desenvolvedor.
-            </p>
+            <p>Este é o meu espaço na internet onde mostro minha evolução como desenvolvedor.</p>
         </section>
 
         <section id="sobre" class="aba">
             <h1>Sobre Mim</h1>
-            <p>
-                Tenho 16 anos e estou construindo minha carreira como desenvolvedor.
-                Estudo HTML, CSS, Git e estou evoluindo todos os dias.
-            </p>
+            <p>Tenho 16 anos e estou evoluindo como desenvolvedor todos os dias.</p>
         </section>
 
         <section id="habilidades" class="aba">
@@ -60,10 +56,11 @@
         <section id="contato" class="aba">
             <h1>Contato</h1>
             <p>Email:
-                <a href="mailto:joniwsfv1@gmail.com" class="link">
-                    joniwsfv1@gmail.com
+                <a href="mailto:joniws.tenorio@gmail.com" class="link">
+                    joniws.tenorio@gmail.com
                 </a>
             </p>
+
             <p>Telefone:
                 <a href="tel:+5511976082899" class="link">
                     11 97608-2899
@@ -75,6 +72,7 @@
 
 </div>
 
+<!-- JS NO FINAL DO BODY (MUITO IMPORTANTE) -->
 <script src="script.js"></script>
 
 </body>
