@@ -6,68 +6,130 @@
 
 body {
     font-family: 'Rethink Sans', sans-serif;
-    background-color: #f1f5f9;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
 }
 
+/* Layout principal */
 .container {
     display: flex;
+    min-height: 100vh;
 }
 
 /* MENU */
 .menu {
-    width: 240px;
-    height: 100vh;
-    background-color: #e2e8f0;
+    width: 260px;
+    background: #111827;
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu h2 {
-    margin-bottom: 30px;
+.logo {
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #38bdf8;
 }
 
 .menu button {
-    font-family: 'Rethink Sans', sans-serif; /* FORÇA A FONTE */
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
+    background: transparent;
+    border: 1px solid #334155;
+    color: white;
     padding: 12px;
-    border: none;
-    background-color: #cbd5e1;
-    font-weight: 600;
-    border-radius: 6px;
+    margin-bottom: 15px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    font-weight: 600;
 }
 
 .menu button:hover {
-    background-color: #94a3b8;
+    background: #38bdf8;
+    color: black;
+    transform: translateX(5px);
 }
 
 /* CONTEÚDO */
 .content {
     flex: 1;
-    padding: 60px;
+    padding: 80px;
 }
 
-/* SISTEMA DE ABAS */
+/* ABAS */
 .aba {
     display: none;
+    animation: fade 0.4s ease-in-out;
 }
 
 .ativa {
     display: block;
 }
 
-h1 {
-    margin-bottom: 20px;
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #1e293b;
+    border-radius: 6px;
+}
+
+/* LINKS */
 .link {
-    color: #2563eb;
+    color: #38bdf8;
     text-decoration: none;
     font-weight: 600;
 }
 
 .link:hover {
     text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu button {
+        margin: 5px;
+    }
+
+    .content {
+        padding: 40px 20px;
+    }
 }
