@@ -1,279 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Jonathan Tenório | Desenvolvedor Front-End</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="icone.png">
+<title>Jonathan Tenório | Desenvolvedor Front-End</title>
 
-    <!-- Fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="icone.png">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Rethink Sans', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-        }
-
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* MENU */
-        .menu {
-            width: 240px;
-            background: #111827;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo {
-            margin-bottom: 30px;
-            font-weight: 800;
-            font-size: 20px;
-            color: #38bdf8;
-        }
-
-        .menu button {
-            font-family: 'Archivo Black', sans-serif;
-            background: transparent;
-            border: 1px solid #334155;
-            color: white;
-            padding: 12px;
-            margin-bottom: 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s ease;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-
-        .menu button:hover {
-            background: #1e293b;
-        }
-
-        .menu button.ativo {
-            background: #38bdf8;
-            color: #0f172a;
-            border: 1px solid #38bdf8;
-        }
-
-        /* CONTEÚDO */
-        .content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            padding: 60px 20px;
-        }
-
-        .aba {
-            display: none;
-            max-width: 650px; /* deixa o texto mais vertical */
-            width: 100%;
-            animation: fade 0.4s ease-in-out;
-        }
-
-        .ativa {
-            display: block;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .foto-site {
-            width: 90px;
-            margin-bottom: 25px;
-            border-radius: 20px;
-        }
-
-        h1 {
-            margin-bottom: 25px;
-            font-size: 30px;
-            color: #38bdf8;
-        }
-
-        p {
-            margin-bottom: 18px;
-            line-height: 1.7;
-            color: #cbd5e1;
-            font-size: 16px;
-        }
-
-        ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        ul li {
-            margin-bottom: 12px;
-            padding: 10px 14px;
-            background: #1e293b;
-            border-radius: 6px;
-        }
-
-        .link {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .menu {
-                width: 100%;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .menu button {
-                margin: 5px;
-            }
-
-            .content {
-                padding: 40px 20px;
-            }
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header class="menu">
+    <h1>Jonathan Tenório</h1>
 
-    <nav class="menu">
-        <h2 class="logo">Jonathan Tenório</h2>
+    <button onclick="mostrarSecao('inicio')" class="ativo">Início</button>
+    <button onclick="mostrarSecao('sobre')">Sobre</button>
+    <button onclick="mostrarSecao('habilidades')">Habilidades</button>
+    <button onclick="mostrarSecao('servicos')">Como Posso Ajudar</button>
+    <button onclick="mostrarSecao('projetos')">Projetos</button>
+    <button onclick="mostrarSecao('contato')">Contato</button>
+</header>
 
-        <button class="ativo" onclick="mostrarAba(event,'inicio')">INÍCIO</button>
-        <button onclick="mostrarAba(event,'sobre')">SOBRE</button>
-        <button onclick="mostrarAba(event,'habilidades')">HABILIDADES</button>
-        <button onclick="mostrarAba(event,'projetos')">PROJETOS</button>
-        <button onclick="mostrarAba(event,'contato')">CONTATO</button>
-    </nav>
+<main>
 
-    <main class="content">
+<section id="inicio" class="secao ativa">
+    <h2>Desenvolvedor Front-End em Formação</h2>
+    <p>
+        Sou focado em criar sites modernos, organizados e responsivos. 
+        Estou construindo minha base sólida em HTML, CSS e JavaScript, 
+        com atenção especial à experiência do usuário e organização do código.
+    </p>
 
-        <section id="inicio" class="aba ativa">
+    <p>
+        Meu objetivo é aplicar meu conhecimento em projetos reais, ajudar empresas
+        a melhorarem sua presença digital e continuar evoluindo todos os dias.
+    </p>
+</section>
 
-            <h1>Desenvolvedor Front-End em Formação</h1>
+<section id="sobre" class="secao">
+    <h2>Sobre Mim</h2>
+    <p>
+        Estou no início da minha jornada na programação, mas estudo diariamente
+        com foco em evolução constante. Já desenvolvi meu próprio portfólio,
+        publiquei utilizando GitHub Pages e aprendi a trabalhar com versionamento usando Git.
+    </p>
 
-            <p>
-                Meu nome é Jonathan Tenório e este é meu portfólio profissional.
-                Aqui apresento minha evolução prática na área de desenvolvimento web.
-            </p>
+    <p>
+        Tenho perfil disciplinado, gosto de aprender na prática e estou sempre buscando melhorar
+        tanto tecnicamente quanto profissionalmente.
+    </p>
 
-            <p>
-                Estou construindo base sólida em HTML, CSS moderno,
-                JavaScript e versionamento com Git.
-            </p>
+    <p>
+        Cada projeto que desenvolvo representa um avanço real na minha jornada como desenvolvedor.
+    </p>
+</section>
 
-            <p>
-                Busco minha primeira oportunidade na área de tecnologia
-                para aplicar meus conhecimentos e continuar evoluindo.
-            </p>
-        </section>
+<section id="habilidades" class="secao">
+    <h2>Habilidades Técnicas</h2>
 
-        <section id="sobre" class="aba">
-            <h1>Sobre Mim</h1>
+    <ul>
+        <li>HTML5 – Estruturação semântica</li>
+        <li>CSS3 – Layout moderno e responsivo</li>
+        <li>Flexbox e Grid</li>
+        <li>JavaScript básico para interações</li>
+        <li>Git e GitHub</li>
+        <li>Publicação com GitHub Pages</li>
+    </ul>
+</section>
 
-            <p>
-                Tenho 16 anos e estou iniciando minha jornada profissional
-                na área de tecnologia.
-            </p>
+<section id="servicos" class="secao">
+    <h2>Como Posso Ajudar</h2>
 
-            <p>
-                Sou disciplinado, focado e movido por evolução constante.
-                Acredito que consistência diária é o que constrói grandes resultados.
-            </p>
+    <ul>
+        <li>Criação de sites institucionais modernos</li>
+        <li>Melhoria visual de sites existentes</li>
+        <li>Adaptação de sites para celular (responsividade)</li>
+        <li>Organização e estruturação de código HTML e CSS</li>
+        <li>Manutenção e ajustes visuais</li>
+    </ul>
 
-            <p>
-                Meu objetivo é crescer como desenvolvedor e
-                conquistar experiência prática no mercado.
-            </p>
-        </section>
+    <p>
+        Meu foco é entregar soluções simples, organizadas e eficientes para empresas que desejam
+        melhorar sua presença online.
+    </p>
+</section>
 
-        <section id="habilidades" class="aba">
-            <h1>Habilidades Técnicas</h1>
+<section id="projetos" class="secao">
+    <h2>Projetos</h2>
 
-            <ul>
-                <li>HTML5 – Estruturação semântica</li>
-                <li>CSS3 – Layout moderno e responsivo</li>
-                <li>JavaScript – Manipulação de DOM</li>
-                <li>Git & GitHub – Controle de versão</li>
-            </ul>
-        </section>
+    <p>
+        Este portfólio foi desenvolvido do zero utilizando HTML, CSS e JavaScript,
+        com foco em organização, responsividade e experiência do usuário.
+    </p>
 
-        <section id="projetos" class="aba">
-            <h1>Projetos</h1>
+    <p>
+        Novos projetos serão adicionados conforme minha evolução.
+    </p>
+</section>
 
-            <p>
-                Este portfólio foi desenvolvido do zero utilizando
-                HTML, CSS e JavaScript puro.
-            </p>
+<section id="contato" class="secao">
+    <h2>Contato</h2>
 
-            <p>
-                O projeto foi versionado com Git e publicado
-                via GitHub Pages.
-            </p>
-        </section>
+    <p>Email: <a href="mailto:joniws.tenorio@gmail.com">joniws.tenorio@gmail.com</a></p>
 
-        <section id="contato" class="aba">
-            <h1>Contato</h1>
+    <div class="botoes-contato">
+        <a href="tel:+5511976082899" class="btn-contato">Ligar</a>
+        <a href="https://wa.me/5511976082899" target="_blank" class="btn-whatsapp">
+            WhatsApp
+        </a>
+    </div>
+</section>
 
-            <p>Email:
-                <a href="mailto:joniws.tenorio@gmail.com" class="link">
-                    joniws.tenorio@gmail.com
-                </a>
-            </p>
+</main>
 
-            <p>Telefone:
-                <a href="tel:+5511976082899" class="link">
-                    11 97608-2899
-                </a>
-            </p>
-        </section>
-
-    </main>
-
-</div>
+<footer>
+    © 2026 Jonathan Tenório - Desenvolvedor Front-End
+</footer>
 
 <script>
-function mostrarAba(event, id) {
-    const abas = document.querySelectorAll('.aba');
-    const botoes = document.querySelectorAll('.menu button');
+function mostrarSecao(id) {
 
-    abas.forEach(aba => aba.classList.remove('ativa'));
-    botoes.forEach(botao => botao.classList.remove('ativo'));
+    document.querySelectorAll('.secao').forEach(secao => {
+        secao.classList.remove('ativa');
+    });
+
+    document.querySelectorAll('.menu button').forEach(btn => {
+        btn.classList.remove('ativo');
+    });
 
     document.getElementById(id).classList.add('ativa');
+
     event.target.classList.add('ativo');
 }
 </script>
