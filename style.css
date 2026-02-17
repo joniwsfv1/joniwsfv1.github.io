@@ -1,41 +1,67 @@
+/* ===== BASE ===== */
+
 body {
     margin: 0;
     font-family: 'Rethink Sans', sans-serif;
-    background: #f1f3f6;
-    color: #222;
+    background: #eaf2fb; /* azul bem suave */
+    color: #1f2937;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/* ===== MENU ===== */
 
 .menu {
     text-align: center;
     padding: 30px 20px;
 }
 
+/* Nome com caixa arredondada */
 .menu h1 {
-    margin-bottom: 20px;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
 }
 
+/* Botões com Quicksand */
 .menu button {
-    font-family: 'Archivo Black', sans-serif;
-    margin: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+
+    margin: 6px;
     padding: 10px 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #e0e4ea;
-    transition: 0.3s;
+
+    background: #dbeafe;
+    color: #1f2937;
+
+    transition: all 0.3s ease;
 }
 
 .menu button:hover {
-    background: #cfd5dd;
+    background: #bfdbfe;
+    transform: translateY(-2px);
 }
 
+/* Botão ativo */
 .menu button.ativo {
-    background: #ffffff;
+    background: white;
     color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+/* ===== CONTEÚDO ===== */
 
 main {
-    max-width: 700px;
+    flex: 1;
+    max-width: 750px;
     margin: auto;
     padding: 20px;
 }
@@ -55,10 +81,13 @@ h2 {
 
 ul {
     padding-left: 20px;
+    line-height: 1.6;
 }
 
+/* ===== BOTÕES CONTATO ===== */
+
 .botoes-contato {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .btn-contato,
@@ -74,11 +103,11 @@ ul {
 }
 
 .btn-contato {
-    background: #1e90ff;
+    background: #2563eb;
 }
 
 .btn-whatsapp {
-    background: #25D366;
+    background: #22c55e;
 }
 
 .btn-contato:hover,
@@ -87,19 +116,23 @@ ul {
     opacity: 0.9;
 }
 
+/* ===== FOOTER FIXO EMBAIXO ===== */
+
 footer {
     text-align: center;
     padding: 20px;
-    background: #e0e4ea;
-    margin-top: 40px;
+    background: #dbeafe;
 }
+
+/* ===== ANIMAÇÃO ===== */
 
 @keyframes fade {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVO */
+/* ===== RESPONSIVO ===== */
+
 @media (max-width: 768px) {
 
     .menu {
@@ -110,7 +143,7 @@ footer {
 
     .menu button {
         width: 90%;
-        max-width: 300px;
+        max-width: 320px;
     }
 
 }
