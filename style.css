@@ -157,12 +157,15 @@ footer {
         align-items: center;
         text-align: center;
         gap: 15px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .foto-perfil {
-        width: 95px;
-        height: 95px;
-    }
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 
 }
