@@ -146,36 +146,39 @@ footer {
         max-width: 320px;
 
      .sobre-container {
-        flex-direction: column;
-        text-align: center;
-    }
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 15px;
+}
+
 
     .foto-perfil {
-        width: 150px;
-        height: 150px;
-    }
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%; /* deixa circular estilo LinkedIn */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
     }
 
 /* ===== SOBRE COM FOTO ===== */
 
-.sobre-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-}
+@media (max-width: 768px) {
 
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.sobre-texto {
-    flex: 1;
-}
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
 
+}
 
 }
